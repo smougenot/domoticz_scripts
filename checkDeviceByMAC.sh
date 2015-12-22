@@ -4,12 +4,14 @@
 # Check if they ping
 # Report device status
 
+_APP_DIR="$(cd -P $(dirname $0); pwd)"
+
 _netMask='192.168.1.0/24'
 _login=
 _password=
 _domoticz=192.168.1.17
 _port=8080
-_device_file=devices.txt
+_device_file="${_APP_DIR}/devices.txt"
 
 function info {
   echo -e "$1"
